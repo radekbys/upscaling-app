@@ -16,12 +16,10 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path, include
-from upscaling import urls as upscaling_urls
-
-print(upscaling_urls)
+from django.urls import path
+from upscaling import views
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
-    path("api/upscaling/", include(upscaling_urls)),
+    path("conv_upscaling/", views.conv_upscaling_view),
+    path("trans_upscaling/", views.trans_upscaling_view),
 ]

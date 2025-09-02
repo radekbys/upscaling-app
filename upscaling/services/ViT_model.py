@@ -133,3 +133,13 @@ class VisionTransformer(nn.Module):
         x = self.norm(x)  # (B, N, E)
         x = self.decoder(x, grid_size)  # (B, 3, H, W)
         return x
+
+
+ViT_model = VisionTransformer(
+    img_size=(360, 640),
+    patch_size=16,
+    embed_dim=1024,
+    depth=5,
+    num_heads=8,
+    mlp_dim=4096,
+)

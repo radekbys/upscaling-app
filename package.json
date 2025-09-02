@@ -1,0 +1,20 @@
+{
+  "name": "upscaling-app",
+  "version": "1.0.0",
+  "description": "a simple app using my upscalers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/radekbys/upscaling-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/radekbys/upscaling-app/issues"
+  },
+  "homepage": "https://github.com/radekbys/upscaling-app#readme"
+}
