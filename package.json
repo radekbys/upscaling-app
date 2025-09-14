@@ -12,9 +12,12 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/radekbys/upscaling-app/issues"
   },
-  "homepage": "https://github.com/radekbys/upscaling-app#readme"
+  "homepage": "https://github.com/radekbys/upscaling-app#readme",
+  "devDependencies": {
+    "@angular/cli": "^20.3.1"
+  }
 }
