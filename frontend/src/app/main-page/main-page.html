@@ -1,10 +1,1 @@
-<div>
-  <mat-form-field appearance="fill">
-    <mat-label>Upscaling method</mat-label>
-    <mat-select [(ngModel)]="selectedUpscaler">
-      <mat-option *ngFor="let upscaler of upscalers" [value]="upscaler">
-        {{ upscaler }}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
-</div>
+<app-image-upscaler-selection />

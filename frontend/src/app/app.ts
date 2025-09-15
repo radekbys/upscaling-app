@@ -5,6 +5,7 @@ import { MainPage } from './main-page/main-page';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [MainPage, MatToolbarModule],
   templateUrl: './app.html',
   styleUrl: './app.css',
