@@ -17,11 +17,10 @@ export class ImageUpscalerSelection {
   selectedUpscaler: string | null = null;
   upscalers = ['convolutional', 'vision-transformer'];
   image = output<File>();
-  upscaler = output<String>();
+  upscaler = output<string>();
 
   pngInputChange(fileInputEvent: any) {
-    console.log(fileInputEvent.target.files[0]);
-    if (fileInputEvent.target.files[0] && !this.selectedUpscaler) {
+    if (fileInputEvent.target.files[0] && this.selectedUpscaler) {
       this.image.emit(fileInputEvent.target.files[0]);
       this.upscaler.emit(this.selectedUpscaler ?? 'convolutional');
     }

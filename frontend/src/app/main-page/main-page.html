@@ -1,1 +1,13 @@
-<app-image-upscaler-selection />
+<mat-toolbar color="primary">
+  <span>Upscaling App</span>
+</mat-toolbar>
+
+<app-image-upscaler-selection
+  (image)="onFileSelected($event)"
+  (upscaler)="onUpscalerSelected($event)"
+/>
+
+<div *ngIf="imagePreviewUrl">
+  <h3>Preview:</h3>
+  <img [src]="imagePreviewUrl" />
+</div>

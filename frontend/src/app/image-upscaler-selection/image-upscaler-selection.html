@@ -1,8 +1,8 @@
 <div class="div-upscaling-image-selection">
   <div class="div-select-upscaling">
     <mat-form-field appearance="fill">
-      <mat-label>Upscaling method</mat-label>
-      <mat-select [(ngModel)]="selectedUpscaler">
+      <mat-label color="main">Upscaling method</mat-label>
+      <mat-select [(ngModel)]="selectedUpscaler" color="accent">
         <mat-option *ngFor="let upscaler of upscalers" [value]="upscaler">
           {{ upscaler }}
         </mat-option>
@@ -18,6 +18,6 @@
       (change)="pngInputChange($event)"
       accept=".png,.jpg,.bmp,.jpeg"
     />
-    <button mat-stroked-button (click)="pngInput.click()">Choose Image</button>
+    <button mat-stroked-button color="main" (click)="pngInput.click()">Choose Image</button>
   </div>
 </div>
