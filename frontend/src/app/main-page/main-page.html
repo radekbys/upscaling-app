@@ -3,11 +3,20 @@
 </mat-toolbar>
 
 <app-image-upscaler-selection
-  (image)="onFileSelected($event)"
   (upscaler)="onUpscalerSelected($event)"
+  (image)="onFileSelected($event)"
 />
 
-<div *ngIf="imagePreviewUrl">
+<div *ngIf="imagePreviewUrl" class="div-title-image">
   <h3>Preview:</h3>
-  <img [src]="imagePreviewUrl" />
+  <img [src]="imagePreviewUrl" alt="selected image preview" />
+</div>
+
+<div *ngIf="imagePreviewUrl && !upscaledImageUrl" class="div-title-image">
+  <h3>Wait for upscaled image, upscaling in progress</h3>
+</div>
+
+<div *ngIf="upscaledImageUrl" class="div-title-image">
+  <h3>Upscaled image preview:</h3>
+  <img [src]="upscaledImageUrl" alt="upscaled image preview" />
 </div>

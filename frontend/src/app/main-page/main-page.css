@@ -1,1 +1,6 @@
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.div-title-image {
+    margin-bottom: 3rem;
+    margin-left: 2rem;
+}

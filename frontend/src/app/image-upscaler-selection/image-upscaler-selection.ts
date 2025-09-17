@@ -21,8 +21,8 @@ export class ImageUpscalerSelection {
 
   pngInputChange(fileInputEvent: any) {
     if (fileInputEvent.target.files[0] && this.selectedUpscaler) {
-      this.image.emit(fileInputEvent.target.files[0]);
       this.upscaler.emit(this.selectedUpscaler ?? 'convolutional');
+      this.image.emit(fileInputEvent.target.files[0]);
     }
   }
 }
