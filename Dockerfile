@@ -36,14 +36,11 @@ COPY --from=frontend-build /app/frontend/dist/frontend/browser/index.html ./djan
 # Install gdown for Google Drive downloads
 RUN pip install gdown
 
-# Download and extract model weights
-RUN if [ ! -d "./upscaling/services/weights" ] || [ -z "$(ls -A ./upscaling/services/weights)" ]; then \
+# Delete existing weights folder and download new weights
+RUN rm -rf ./upscaling/services/weights && \
     gdown --id 16fph_2JdVmQ8kbixpkaQVGPi1OKDbIfv -O /tmp/weights.zip && \
     unzip /tmp/weights.zip -d ./upscaling/services/ && \
-    rm /tmp/weights.zip; \
-    else \
-    echo "Weights folder already exists and is not empty, skipping download."; \
-    fi
+    rm /tmp/weights.zip
 
 # Collect Django static files
 RUN mkdir -p /app/staticfiles

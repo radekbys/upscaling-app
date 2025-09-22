@@ -7,8 +7,6 @@ services:
     environment:
       PYTHONDONTWRITEBYTECODE: 1
       PYTHONUNBUFFERED: 1
-    volumes:
-      - ./upscaling/services/weights:/app/upscaling/services/weights
     deploy:
       resources:
         reservations:
