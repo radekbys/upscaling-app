@@ -33,3 +33,4 @@ torch==2.8.0+cu129
 torchvision==0.23.0+cu129
 triton==3.4.0
 typing_extensions==4.12.2
+whitenoise==6.11.0
