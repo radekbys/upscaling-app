@@ -1,0 +1,30 @@
+# Python cache and virtual environment
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+env/
+venv/
+
+# Django migrations (optional, you might want to keep them)
+*/migrations/
+
+# Node.js dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+tmp/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE/editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
