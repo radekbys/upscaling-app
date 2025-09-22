@@ -1,9 +1,19 @@
 # upscaling-app
 
-a simple app using my upscalers
+a simple app using my upscalers, it is basically just a prototype, but I am fine with it at this stage
 
 # weights for the models
 
-before building the app you need to download and include weights
+app uses model weights which cannot be uploaded to github, too large files
 link to the compressed folder - https://drive.google.com/file/d/16fph_2JdVmQ8kbixpkaQVGPi1OKDbIfv/view?usp=sharing
-decompress the file and put the weights folder into the upscaling-app/upscaling/services directory
+
+# running the application
+You dont need to download these files, just use docker:
+
+docker-compose build
+
+docker-compose up
+
+
+
+
