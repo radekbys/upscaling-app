@@ -16,3 +16,6 @@ docker-compose build
 docker-compose up
 
 # to run on a machine without nvidia gpu comment out last line of docker-compose.yml
+
+tested on a laptop with no nvidia gpu, wont upscale images larger than around 720p (HD), will get a timeout after 120seconds
+5070ti can upscale even 4k into 8k easily within that timeframe
