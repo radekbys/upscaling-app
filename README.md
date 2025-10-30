@@ -1,6 +1,6 @@
 # upscaling-app
 
-a simple app using my upscalers, it is basically just a prototype, but I am fine with it at this stage
+a simple app using my upscalers
 
 # weights for the models
 
