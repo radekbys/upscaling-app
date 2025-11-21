@@ -1,22 +1,24 @@
-<mat-toolbar color="primary">
-  <span>Upscaling App</span>
-</mat-toolbar>
-
-<app-image-upscaler-selection
-  (upscaler)="onUpscalerSelected($event)"
-  (image)="onFileSelected($event)"
-/>
-
-<div *ngIf="imagePreviewUrl" class="div-title-image">
-  <h3>Preview:</h3>
-  <img [src]="imagePreviewUrl" alt="selected image preview" />
+<div class="div-upscaling-image-selection">
+  <app-image-upscaler-selection (upscaler)="onUpscalerSelected($event)" />
+  <app-image-select-button (image)="onFileSelected($event)" />
+  <app-image-download-button [upscaledImageUrl]="upscaledImageUrl()" />
 </div>
 
-<div *ngIf="imagePreviewUrl && !upscaledImageUrl" class="div-title-image">
+@if(errorMessage()){
+<h3>{{ errorMessage() }}</h3>
+<p>Server likely couldn't process image before timeout. Happens with verry large images</p>
+} @if (imagePreviewUrl()) {
+<div class="div-title-image">
+  <h3>Preview:</h3>
+  <img [src]="imagePreviewUrl()" alt="selected image preview" />
+</div>
+} @if (imagePreviewUrl() && !upscaledImageUrl()) {
+<div class="div-title-image">
   <h3>Wait for upscaled image, upscaling in progress</h3>
 </div>
-
-<div *ngIf="upscaledImageUrl" class="div-title-image">
+} @if (upscaledImageUrl()) {
+<div class="div-title-image">
   <h3>Upscaled image preview:</h3>
-  <img [src]="upscaledImageUrl" alt="upscaled image preview" />
+  <img [src]="upscaledImageUrl()" alt="upscaled image preview" />
 </div>
+}

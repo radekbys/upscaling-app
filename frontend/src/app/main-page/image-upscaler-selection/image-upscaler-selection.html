@@ -1,0 +1,16 @@
+<div class="div-select-upscaling">
+  <mat-form-field appearance="fill">
+    <mat-label color="main">Upscaling method</mat-label>
+    <mat-select
+      (selectionChange)="upscalerChange($event.value)"
+      [(ngModel)]="selectedUpscaler"
+      color="accent"
+    >
+      @for (upscaler of upscalers; track upscaler) {
+      <mat-option [value]="upscaler">
+        {{ upscaler }}
+      </mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+</div>

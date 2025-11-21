@@ -1,0 +1,8 @@
+<button
+  mat-stroked-button
+  color="main"
+  [disabled]="!upscaledImageUrl()"
+  (click)="downloadBlob(upscaledImageUrl(), 'upscaled.png')"
+>
+  Download Image
+</button>

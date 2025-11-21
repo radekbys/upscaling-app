@@ -1,0 +1,9 @@
+<input
+  #pngInput
+  hidden="true"
+  type="file"
+  onclick="this.value=null"
+  (change)="pngInputChange($event)"
+  accept=".png,.jpg,.bmp,.jpeg"
+/>
+<button mat-stroked-button color="main" (click)="pngInput.click()">Choose Image</button>
